@@ -1,0 +1,159 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f1f5f9;
+    color: #1e293b;
+}
+
+/* Main application */
+.app {
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    background-color: #4338ca;
+    color: white;
+    text-align: center;
+    padding: 30px 15px;
+}
+
+header h1 {
+    margin-bottom: 10px;
+    font-size: 30px;
+}
+
+header p {
+    font-size: 16px;
+}
+
+/* Main content */
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 30px auto;
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 25px;
+    align-items: start;
+}
+
+/* Form and details cards */
+.student-form,
+.student-details {
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+}
+
+.student-form h2,
+.student-details h2 {
+    color: #4338ca;
+    margin-bottom: 20px;
+}
+
+/* Form fields */
+.student-form label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+.student-form input {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #cbd5e1;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+.student-form input:focus {
+    outline: 2px solid #818cf8;
+    border-color: #4338ca;
+}
+
+/* Button */
+.student-form button {
+    width: 100%;
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #4338ca;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.student-form button:hover {
+    background-color: #3730a3;
+}
+
+/* Student table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #e2e8f0;
+    text-align: left;
+    font-size: 14px;
+}
+
+th {
+    background-color: #4338ca;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f8fafc;
+}
+
+tbody tr:hover {
+    background-color: #e0e7ff;
+}
+
+.empty-message {
+    color: #64748b;
+    margin-top: 10px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: #64748b;
+}
+
+/* Responsive layout */
+@media (max-width: 700px) {
+    main {
+        grid-template-columns: 1fr;
+        width: 92%;
+    }
+
+    header h1 {
+        font-size: 24px;
+    }
+
+    .student-form,
+    .student-details {
+        padding: 18px;
+    }
+}
