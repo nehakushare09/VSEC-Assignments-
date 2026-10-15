@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Result Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Result Management System</h1>
+        <p>Manage student marks and academic performance</p>
+    </header>
+
+    <main>
+        <section class="form-section">
+            <h2>Enter Student Details</h2>
+
+            <form id="resultForm">
+                <label for="studentName">Student Name</label>
+                <input type="text" id="studentName"
+                       placeholder="Enter student name" required>
+
+                <label for="rollNumber">Roll Number</label>
+                <input type="text" id="rollNumber"
+                       placeholder="Enter roll number" required>
+
+                <label for="maths">Mathematics (out of 100)</label>
+                <input type="number" id="maths"
+                       min="0" max="100" required>
+
+                <label for="science">Science (out of 100)</label>
+                <input type="number" id="science"
+                       min="0" max="100" required>
+
+                <label for="english">English (out of 100)</label>
+                <input type="number" id="english"
+                       min="0" max="100" required>
+
+                <button type="submit">Add Student Result</button>
+            </form>
+        </section>
+
+        <section class="results-section">
+            <h2>Student Results</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll No.</th>
+                            <th>Name</th>
+                            <th>Maths</th>
+                            <th>Science</th>
+                            <th>English</th>
+                            <th>Total / 300</th>
+                            <th>Percentage</th>
+                        </tr>
+                    </thead>
+                    <tbody id="studentTableBody">
+                        <!-- JavaScript will add student records here -->
+                    </tbody>
+                </table>
+            </div>
+
+            <div id="topperBox" class="topper-box">
+                <h3>Class Topper</h3>
+                <p id="topperDetails">No student records available yet.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Result Management System</p>
+    </footer>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>
