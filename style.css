@@ -1,0 +1,215 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f3ef;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Header and navigation */
+header {
+    background-color: #ffffff;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    color: #5b3028;
+    font-size: 2rem;
+}
+
+header p {
+    color: #777;
+    margin: 5px 0 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+nav a {
+    color: #5b3028;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 5px;
+}
+
+nav a:hover {
+    background-color: #5b3028;
+    color: white;
+}
+
+/* Main sections */
+section {
+    background-color: white;
+    margin: 25px auto;
+    padding: 30px;
+    width: 90%;
+    max-width: 1100px;
+    border-radius: 10px;
+}
+
+section h2 {
+    text-align: center;
+    color: #5b3028;
+    margin-bottom: 20px;
+}
+
+/* Welcome section */
+.hero {
+    text-align: center;
+    background-color: #eee2d5;
+    padding: 60px 20px;
+}
+
+.hero p {
+    margin-bottom: 25px;
+}
+
+.button,
+button {
+    display: inline-block;
+    background-color: #5b3028;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.button:hover,
+button:hover {
+    background-color: #82483c;
+}
+
+/* Featured books */
+.book-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+}
+
+.book-card {
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    overflow-wrap: anywhere;
+}
+
+.book-card img {
+    width: 130px;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.book-card h3 {
+    color: #5b3028;
+    margin-bottom: 8px;
+}
+
+.book-card p {
+    margin-bottom: 10px;
+}
+
+/* Categories */
+.categories {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    list-style: none;
+}
+
+.categories li {
+    background-color: #eee2d5;
+    padding: 10px 15px;
+    border-radius: 20px;
+}
+
+/* Contact form */
+form {
+    max-width: 600px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font: inherit;
+}
+
+textarea {
+    resize: vertical;
+}
+
+/* Footer */
+footer {
+    background-color: #5b3028;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+footer a {
+    color: white;
+}
+
+/* Tablet screens */
+@media (max-width: 768px) {
+    .book-container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    section {
+        padding: 22px;
+    }
+}
+
+/* Mobile screens */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.6rem;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    .book-container {
+        grid-template-columns: 1fr;
+    }
+
+    section {
+        width: 94%;
+        padding: 18px;
+    }
+
+    .hero {
+        padding: 35px 15px;
+    }
+}
