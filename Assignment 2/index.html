@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Information Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>Student Information Portal</h1>
+        <p>Learn, Grow and Achieve</p>
+
+        <nav aria-label="Main navigation">
+            <a href="#home">Home</a>
+            <a href="#students">Students</a>
+            <a href="#register">Register</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Welcome to Our Portal</h2>
+            <p>
+                This portal displays student information and provides
+                a simple form for student registration.
+            </p>
+        </section>
+
+        <section id="students">
+            <h2>Student Records</h2>
+
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Roll No.</th>
+                            <th>Student Name</th>
+                            <th>Department</th>
+                            <th>Year</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>101</td>
+                            <td>Aarav Sharma</td>
+                            <td>Information Technology</td>
+                            <td>Second Year</td>
+                        </tr>
+                        <tr>
+                            <td>102</td>
+                            <td>Priya Patil</td>
+                            <td>Computer Engineering</td>
+                            <td>Second Year</td>
+                        </tr>
+                        <tr>
+                            <td>103</td>
+                            <td>Rahul Deshmukh</td>
+                            <td>Electronics</td>
+                            <td>Third Year</td>
+                        </tr>
+                        <tr>
+                            <td>104</td>
+                            <td>Sneha Joshi</td>
+                            <td>Information Technology</td>
+                            <td>Third Year</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section id="register">
+            <h2>Student Registration Form</h2>
+
+            <form action="#" method="get">
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name"
+                       placeholder="Enter your full name" required>
+
+                <label for="roll">Roll Number:</label>
+                <input type="number" id="roll" name="roll"
+                       placeholder="Enter your roll number" required>
+
+                <label for="email">Email Address:</label>
+                <input type="email" id="email" name="email"
+                       placeholder="Enter your email" required>
+
+                <label for="department">Department:</label>
+                <select id="department" name="department" required>
+                    <option value="">Select Department</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="Computer">Computer Engineering</option>
+                    <option value="ENTC">Electronics and Telecommunication</option>
+                    <option value="Mechanical">Mechanical Engineering</option>
+                    <option value="Civil">Civil Engineering</option>
+                </select>
+
+                <label for="year">Academic Year:</label>
+                <select id="year" name="year" required>
+                    <option value="">Select Year</option>
+                    <option value="First">First Year</option>
+                    <option value="Second">Second Year</option>
+                    <option value="Third">Third Year</option>
+                    <option value="Final">Final Year</option>
+                </select>
+
+                <button type="submit">Register Student</button>
+            </form>
+        </section>
+
+        <section id="contact">
+            <h2>Contact Information</h2>
+            <p>Email: studentportal@example.com</p>
+            <p>Office Hours: Monday to Friday, 9 AM to 5 PM</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Student Information Portal</p>
+        <a href="#home">Back to Top</a>
+    </footer>
+
+</body>
+</html>

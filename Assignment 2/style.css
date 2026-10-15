@@ -1,0 +1,200 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f6fa;
+    color: #263238;
+    line-height: 1.6;
+}
+
+/* Header */
+header {
+    background-color: #173b65;
+    color: white;
+    text-align: center;
+    padding: 25px 15px;
+}
+
+header h1 {
+    margin-bottom: 5px;
+    font-size: 2rem;
+}
+
+header p {
+    color: #dbeafe;
+    margin-bottom: 20px;
+}
+
+/* Navigation bar */
+nav {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 5px;
+    transition: background-color 0.2s;
+}
+
+nav a:hover {
+    background-color: #315d8b;
+}
+
+/* Content sections */
+section {
+    background-color: white;
+    width: 90%;
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.06);
+}
+
+section h2 {
+    color: #173b65;
+    margin-bottom: 15px;
+}
+
+/* Student table */
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+th,
+td {
+    padding: 12px;
+    border: 1px solid #d6dee8;
+    text-align: left;
+}
+
+th {
+    background-color: #173b65;
+    color: white;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f0f5fb;
+}
+
+tbody tr:hover {
+    background-color: #e0ebf8;
+}
+
+/* Registration form */
+form {
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+label {
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 11px;
+    border: 1px solid #bdc9d8;
+    border-radius: 5px;
+    font: inherit;
+}
+
+input:focus,
+select:focus {
+    outline: 2px solid #6b9ed6;
+    border-color: #173b65;
+}
+
+button {
+    margin-top: 15px;
+    padding: 12px;
+    border: none;
+    border-radius: 5px;
+    background-color: #173b65;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #315d8b;
+}
+
+/* Footer */
+footer {
+    background-color: #173b65;
+    color: white;
+    text-align: center;
+    padding: 22px 15px;
+}
+
+footer a {
+    color: #dbeafe;
+}
+
+/* Tablet layout */
+@media (max-width: 768px) {
+    section {
+        width: 94%;
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 1.7rem;
+    }
+
+    th,
+    td {
+        padding: 9px;
+    }
+}
+
+/* Mobile layout */
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.4rem;
+    }
+
+    nav {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    nav a {
+        display: block;
+    }
+
+    section {
+        padding: 16px;
+    }
+
+    th,
+    td {
+        padding: 8px;
+        font-size: 0.85rem;
+    }
+}
