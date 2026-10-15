@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Employee Registration</h1>
+        <p class="subtitle">Enter your details to register</p>
+
+        <form id="employeeForm">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" placeholder="Enter full name">
+                <small id="nameError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="text" id="email" placeholder="Enter email address">
+                <small id="emailError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" placeholder="Minimum 8 characters">
+                <small id="passwordError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" id="phone" placeholder="Enter 10-digit phone number">
+                <small id="phoneError"></small>
+            </div>
+
+            <div class="form-group">
+                <label for="department">Department</label>
+                <select id="department">
+                    <option value="">Select Department</option>
+                    <option value="IT">Information Technology</option>
+                    <option value="HR">Human Resources</option>
+                    <option value="Finance">Finance</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="Sales">Sales</option>
+                </select>
+                <small id="departmentError"></small>
+            </div>
+
+            <button type="submit">Register Employee</button>
+
+            <p id="successMessage"></p>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
