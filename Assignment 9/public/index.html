@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5f3ee">
+  <title>BookBuddy — your personal shelf</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="#top" aria-label="BookBuddy home"><span class="brand-mark">b.</span><span>bookbuddy</span></a>
+    <span class="top-note">A little home for your books <span aria-hidden="true">✳</span></span>
+  </header>
+  <main id="top" class="page-shell">
+    <section class="intro">
+      <div class="eyebrow"><span class="eyebrow-line"></span> YOUR PERSONAL LIBRARY</div>
+      <div class="intro-row">
+        <div><h1>Every book has<br>a <em>place</em> here.</h1><p class="subtitle">Keep track of the stories you love, the ones you’re reading, and the ones still waiting.</p></div>
+        <div class="book-illustration" aria-hidden="true"><span class="spark spark-one">✳</span><div class="book-shape book-back"></div><div class="book-shape book-front"><span>one more<br>chapter</span><i></i></div><span class="spark spark-two">✦</span></div>
+      </div>
+    </section>
+
+    <section class="library-panel" aria-labelledby="shelf-heading">
+      <div class="shelf-heading"><div><div class="eyebrow small">YOUR COLLECTION</div><h2 id="shelf-heading">The bookshelf <span class="count" id="book-count">0 books</span></h2></div><button class="primary-button" id="add-book-button" type="button"><span aria-hidden="true">＋</span> Add a book</button></div>
+      <div class="toolbar"><label class="search-box"><span aria-hidden="true">⌕</span><input id="search-input" type="search" placeholder="Search by title or author…" autocomplete="off"><kbd>⌘ K</kbd></label><div class="filters" role="group" aria-label="Filter books"><button class="filter-button active" data-filter="All" type="button">All <span id="all-count">0</span></button><button class="filter-button" data-filter="Want to Read" type="button">Want to Read</button><button class="filter-button" data-filter="Reading" type="button">Reading</button><button class="filter-button" data-filter="Completed" type="button">Completed</button></div></div>
+      <div id="notice" class="notice" role="status" aria-live="polite" hidden></div>
+      <div id="book-grid" class="book-grid" aria-live="polite"></div>
+    </section>
+    <footer><span>Made for the love of reading</span><span>One page at a time <span aria-hidden="true">♡</span></span></footer>
+  </main>
+
+  <dialog id="book-dialog" class="book-dialog">
+    <form id="book-form" novalidate>
+      <div class="dialog-top"><div><div class="eyebrow small" id="form-eyebrow">ADD TO YOUR SHELF</div><h2 id="dialog-title">A new chapter</h2></div><button class="icon-button close-dialog" type="button" aria-label="Close">×</button></div>
+      <p class="dialog-copy">A few details and it’s yours to keep.</p>
+      <label class="field-label" for="title">Book title</label><input class="form-input" id="title" name="title" maxlength="120" required placeholder="e.g. The Midnight Library">
+      <label class="field-label" for="author">Author</label><input class="form-input" id="author" name="author" maxlength="100" required placeholder="e.g. Matt Haig">
+      <label class="field-label" for="genre">Genre</label><input class="form-input" id="genre" name="genre" maxlength="60" required placeholder="e.g. Fiction">
+      <label class="field-label" for="status">Reading status</label><select class="form-input" id="status" name="status" required><option>Want to Read</option><option>Reading</option><option>Completed</option></select>
+      <p id="form-error" class="form-error" role="alert" hidden></p>
+      <div class="dialog-actions"><button class="text-button close-dialog" type="button">Cancel</button><button id="save-button" class="primary-button" type="submit">Add book <span aria-hidden="true">→</span></button></div>
+    </form>
+  </dialog>
+  <template id="book-template"><article class="book-card"><div class="card-top"><span class="genre-label"></span><button class="more-button" type="button" aria-label="Book actions">•••</button><div class="action-menu" hidden><button class="edit-action" type="button">Edit details</button><button class="delete-action" type="button">Remove book</button></div></div><div class="cover" aria-hidden="true"><span class="cover-mark">✳</span><span class="cover-title"></span><span class="cover-author"></span></div><div class="card-info"><h3 class="card-title"></h3><p class="card-author"></p><div class="card-bottom"><span class="status-pill"></span><span class="added-date"></span></div></div></article></template>
+</body>
+</html>
